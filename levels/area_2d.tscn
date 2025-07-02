@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://h7dqglhmiwb8"]
+
+[ext_resource type="Script" uid="uid://blrtottrf7l66" path="res://levels/area_2d.gd" id="1_ojsku"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_ojsku")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

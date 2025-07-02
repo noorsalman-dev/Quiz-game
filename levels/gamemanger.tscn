@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://s5cgxexav2ai"]
+
+[ext_resource type="Script" uid="uid://ckoyw6b1rkkrx" path="res://script/gamemanger.gd" id="1_76gcf"]
+[ext_resource type="FontFile" uid="uid://b0i5rvqyxw160" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="2_r5mn4"]
+
+[node name="gamemanger" type="Node"]
+script = ExtResource("1_76gcf")
+
+[node name="scoreLabel" type="Label" parent="."]
+offset_left = 1154.0
+offset_top = -196.0
+offset_right = 1384.0
+offset_bottom = -155.0
+theme_override_colors/font_color = Color(0.245239, 0.000475917, 0.632895, 1)
+theme_override_fonts/font = ExtResource("2_r5mn4")
+theme_override_font_sizes/font_size = 11
+text = "you collected 
+x point"
+horizontal_alignment = 1

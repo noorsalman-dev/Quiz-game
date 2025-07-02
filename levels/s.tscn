@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://888hmfpwhp7j"]
+
+[ext_resource type="Script" uid="uid://s6xk66etwogf" path="res://next_level_script/katak.gd" id="1_cybpk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mf1a"]
+size = Vector2(69.5, 71)
+
+[node name="katak" type="Area2D"]
+script = ExtResource("1_cybpk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16.25, -18.5)
+shape = SubResource("RectangleShape2D_4mf1a")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="." to="." method="_on_mouse_shape_exited"]
