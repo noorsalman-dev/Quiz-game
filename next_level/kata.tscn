@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1v5rw5nrbp1a"]
+
+[ext_resource type="Script" uid="uid://c0qfuntx5sixy" path="res://script/kata.gd" id="1_gy5b6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gy5b6"]
+radius = 45.9653
+
+[node name="kata" type="Area2D"]
+position = Vector2(70, 35)
+script = ExtResource("1_gy5b6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.75, -10.5)
+shape = SubResource("CircleShape2D_gy5b6")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="." to="." method="_on_mouse_shape_exited"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbrq3dol6l8lu"]
+
+[ext_resource type="Script" uid="uid://d1go81e1krpaw" path="res://script/ata.gd" id="1_r4ofc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mf1a"]
+size = Vector2(69.5, 71)
+
+[node name="ata" type="Area2D"]
+script = ExtResource("1_r4ofc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4mf1a")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="." to="." method="_on_mouse_shape_exited"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c03uevxcwiexj"]
+
+[ext_resource type="Texture2D" uid="uid://5s3e03lxcgi7" path="res://assets/brackeys_platformer_assets/sprites/fruit.png" id="1_g2m0u"]
+
+[node name="fruits" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_g2m0u")
+region_enabled = true
+region_rect = Rect2(-3, 0, 22, 19)

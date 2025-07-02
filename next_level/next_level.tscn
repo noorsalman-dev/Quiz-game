@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceum2hw5dbh7d"]
+
+[ext_resource type="Script" uid="uid://v7s3p1nyjpmd" path="res://area_2d.gd" id="1_7isg3"]
+
+[node name="next_level" type="Area2D"]
+script = ExtResource("1_7isg3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d20lt8eekbkro"]
+
+[ext_resource type="Texture2D" uid="uid://crvtthbiid7ug" path="res://script/purifier.png" id="1_wpo40"]
+
+[node name="Purifier" type="Sprite2D"]
+position = Vector2(-2, -11)
+texture = ExtResource("1_wpo40")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3egilauccbhi"]
+
+[ext_resource type="Script" uid="uid://duw2n1jt3wgwp" path="res://next_level_script/next_level_12.gd" id="1_r64lo"]
+
+[node name="next_level_2" type="Area2D"]
+script = ExtResource("1_r64lo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

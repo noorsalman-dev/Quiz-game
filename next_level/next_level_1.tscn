@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bccn1urg7ipy4"]
+
+[ext_resource type="Script" uid="uid://bapyc3anstycs" path="res://script/next_level_1.gd" id="1_uhneb"]
+
+[node name="next_level" type="Area2D"]
+position = Vector2(-1, -6)
+script = ExtResource("1_uhneb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

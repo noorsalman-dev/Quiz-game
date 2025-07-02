@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://deps1cn6vxg8q"]
+
+[ext_resource type="Texture2D" uid="uid://o6f70815d3rc" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetLogic.png" id="1_t2wxo"]
+
+[node name="TilesetLogic" type="Sprite2D"]
+position = Vector2(29, -11)
+texture = ExtResource("1_t2wxo")
+region_enabled = true
+region_rect = Rect2(0, 79, 15, 17)
+
+[node name="TilesetLogic" type="Sprite2D" parent="."]
+position = Vector2(-9.99999, -6)
+rotation = 0.417551
+texture = ExtResource("1_t2wxo")
+region_enabled = true
+region_rect = Rect2(48, 79, 18, 19)
+
+[node name="TilesetLogic2" type="Sprite2D" parent="."]
+position = Vector2(-19.75, 2)
+rotation = -0.489382
+scale = Vector2(2.25, 0.5)
+texture = ExtResource("1_t2wxo")
+region_enabled = true
+region_rect = Rect2(114, 0, 6, 6)
