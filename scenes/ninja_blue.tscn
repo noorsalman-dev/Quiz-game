@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqgt1gtlsqh43"]
+
+[ext_resource type="PackedScene" uid="uid://co5qpuj3hns3e" path="res://assets/content/character/ninja_blue/ninja_blue.tscn" id="1_ttuhu"]
+
+[node name="NinjaBlue" instance=ExtResource("1_ttuhu")]

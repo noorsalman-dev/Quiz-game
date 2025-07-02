@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://df5l1x6abyhnm"]
+
+[ext_resource type="Texture2D" uid="uid://5s3e03lxcgi7" path="res://assets/brackeys_platformer_assets/sprites/fruit.png" id="1_xnxqd"]
+[ext_resource type="PackedScene" uid="uid://bj8vslpa81bcw" path="res://next_level/next_level_2.tscn" id="2_2s5a0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2s5a0"]
+radius = 6.08276
+
+[node name="dede" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-14, -11)
+texture = ExtResource("1_xnxqd")
+region_enabled = true
+region_rect = Rect2(0, 31, 16, 19)
+
+[node name="next_level_2" parent="." instance=ExtResource("2_2s5a0")]
+position = Vector2(1115.16, -101.102)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="next_level_2"]
+position = Vector2(-1128.16, 92.1018)
+shape = SubResource("CircleShape2D_2s5a0")

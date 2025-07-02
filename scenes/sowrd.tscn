@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://jfhpukulfrp1"]
+
+[node name="sowrd" type="Area2D"]
+collision_layer = 2

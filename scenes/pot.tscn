@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cplc77ethin2"]
+
+[ext_resource type="PackedScene" uid="uid://dxma3r6xd3454" path="res://assets/content/destroyable/pot.tscn" id="1_wiura"]
+[ext_resource type="Script" uid="uid://4xaenh1p60f" path="res://assets/system/stat/life/resource_life.gd" id="2_vw7uc"]
+
+[sub_resource type="Resource" id="Resource_wiura"]
+resource_local_to_scene = true
+script = ExtResource("2_vw7uc")
+max_life = 1.0
+life = 1.0
+can_be_damaged_with_no_life = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ch6fh"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[node name="Pot" instance=ExtResource("1_wiura")]
+life = SubResource("Resource_wiura")
+
+[node name="Particle" parent="." index="3"]
+material = SubResource("CanvasItemMaterial_ch6fh")

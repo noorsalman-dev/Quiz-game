@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyc62ptb11iod"]
+
+[ext_resource type="PackedScene" uid="uid://dvnv45u7vj35n" path="res://assets/content/character/pig/pig.tscn" id="1_o4u4d"]
+
+[node name="Pig" instance=ExtResource("1_o4u4d")]

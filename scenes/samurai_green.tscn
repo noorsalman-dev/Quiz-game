@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://deiu0y2khldsg"]
+
+[ext_resource type="PackedScene" uid="uid://cw76qbrkm15gy" path="res://assets/content/character/samurai_green/samurai_green.tscn" id="1_svbnb"]
+
+[node name="SamuraiGreen" instance=ExtResource("1_svbnb")]

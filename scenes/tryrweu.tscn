@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqdnhhwok14kp"]
+
+[ext_resource type="Script" uid="uid://bkdgg6k5ebhl1" path="res://script/tryrweu.gd" id="1_35nfp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0bwch"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t81fu"]
+
+[node name="tryrweu" type="Area2D"]
+script = ExtResource("1_35nfp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0bwch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t81fu")

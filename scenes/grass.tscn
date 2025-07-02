@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgo61dfrhjeit"]
+
+[ext_resource type="PackedScene" uid="uid://domrx1cgi35kg" path="res://assets/content/destroyable/grass.tscn" id="1_cm8hg"]
+[ext_resource type="Script" uid="uid://4xaenh1p60f" path="res://assets/system/stat/life/resource_life.gd" id="2_q3oxx"]
+
+[sub_resource type="Resource" id="Resource_cm8hg"]
+resource_local_to_scene = true
+script = ExtResource("2_q3oxx")
+max_life = 1.0
+life = 1.0
+can_be_damaged_with_no_life = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uevyq"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[node name="Grass" instance=ExtResource("1_cm8hg")]
+life = SubResource("Resource_cm8hg")
+
+[node name="Particle" parent="." index="3"]
+material = SubResource("CanvasItemMaterial_uevyq")

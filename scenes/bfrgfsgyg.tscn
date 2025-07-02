@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://buhcvs2ka6j8d"]
+
+[ext_resource type="Script" uid="uid://bfes1ndvumwj7" path="res://script/bfrgfsgyg.gd" id="1_wlgo4"]
+[ext_resource type="Texture2D" uid="uid://dcbf8sboovuay" path="res://assets/Ninja Adventure - Asset Pack/Actor/Animals/Cat/SpriteSheet.png" id="2_4mbks"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1j87"]
+size = Vector2(9, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d547h"]
+atlas = ExtResource("2_4mbks")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h32i"]
+atlas = ExtResource("2_4mbks")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_22l5s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d547h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h32i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="bfrgfsgyg" type="Area2D"]
+script = ExtResource("1_wlgo4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_n1j87")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_22l5s")
+autoplay = "default"
+frame_progress = 0.0354291
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

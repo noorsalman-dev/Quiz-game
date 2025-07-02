@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://cjt3mkjlu0mr3"]
+
+[ext_resource type="Script" uid="uid://hp8wbi78kxqr" path="res://script/area_2d.gd" id="1_d4a7c"]
+[ext_resource type="Texture2D" uid="uid://bdioru7o23dwk" path="res://assets/Ninja Adventure - Asset Pack/Actor/Boss/DemonCyclop2/Idle.png" id="2_lnsc3"]
+[ext_resource type="PackedScene" uid="uid://c0ued4bbrcf6k" path="res://sceans/killzone.tscn" id="3_lnsc3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0e1wa"]
+radius = 18.1108
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjlla"]
+atlas = ExtResource("2_lnsc3")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f073t"]
+atlas = ExtResource("2_lnsc3")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc76s"]
+atlas = ExtResource("2_lnsc3")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m8lt"]
+atlas = ExtResource("2_lnsc3")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bbhi"]
+atlas = ExtResource("2_lnsc3")
+region = Rect2(200, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ufvvs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjlla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f073t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kc76s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5m8lt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bbhi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wjlla"]
+radius = 32.0156
+
+[node name="Area2D" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_d4a7c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-29, -3)
+shape = SubResource("CircleShape2D_0e1wa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-28, -5)
+sprite_frames = SubResource("SpriteFrames_ufvvs")
+frame = 2
+frame_progress = 0.244622
+
+[node name="killzone" parent="." instance=ExtResource("3_lnsc3")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-29, -2)
+shape = SubResource("CircleShape2D_wjlla")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

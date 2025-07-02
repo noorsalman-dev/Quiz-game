@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://c7q7bqv2atlsr"]
+
+[ext_resource type="Texture2D" uid="uid://cm0cauvbmolji" path="res://assets/brackeys_platformer_assets/sprites/slime_purple.png" id="1_nfunm"]
+[ext_resource type="Script" uid="uid://l4csp8ikq6n6" path="res://sceans/area_2d.gd" id="2_nfunm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfunm"]
+atlas = ExtResource("1_nfunm")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6r0p"]
+atlas = ExtResource("1_nfunm")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ce51j"]
+atlas = ExtResource("1_nfunm")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtjgg"]
+atlas = ExtResource("1_nfunm")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37yyr"]
+atlas = ExtResource("1_nfunm")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vp4m"]
+atlas = ExtResource("1_nfunm")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3yvq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfunm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6r0p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ce51j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtjgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37yyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vp4m")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u6r0p"]
+radius = 86.5332
+
+[node name="slim" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g3yvq")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="dete" type="Area2D" parent="."]
+script = ExtResource("2_nfunm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dete"]
+position = Vector2(4, 2)
+shape = SubResource("CircleShape2D_u6r0p")
+
+[connection signal="body_entered" from="dete" to="dete" method="_on_body_entered"]
+[connection signal="body_exited" from="dete" to="dete" method="_on_body_exited"]

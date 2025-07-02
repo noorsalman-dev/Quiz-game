@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxvtoum5iukou"]
+
+[ext_resource type="Script" uid="uid://cktql08oj0j7j" path="res://script/coin.gd" id="1_1bo8q"]
+
+[node name="coin" type="Area2D"]
+script = ExtResource("1_1bo8q")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]
