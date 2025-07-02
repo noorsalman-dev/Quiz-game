@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://hry6gbkqv5bj"]
+
+[ext_resource type="PackedScene" uid="uid://f8ssb16v0u2v" path="res://sceans/tufaha.tscn" id="1_tkoi2"]
+
+[node name="tufaha" instance=ExtResource("1_tkoi2")]
